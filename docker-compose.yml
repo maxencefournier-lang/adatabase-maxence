@@ -5,7 +5,7 @@
 services:
   db:
     image: postgres:16
-    container_name: adakor-db
+    container_name: adatabase-db
     environment:
       POSTGRES_USER: ada
       POSTGRES_PASSWORD: ada
@@ -13,7 +13,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - ./adakor.sql:/docker-entrypoint-initdb.d/01-adakor.sql
+      - ./adatabase.sql:/docker-entrypoint-initdb.d/adatabase.sql
       - adakor-data:/var/lib/postgresql/data
 
 volumes:
